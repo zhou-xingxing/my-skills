@@ -32,3 +32,5 @@ cp -r ~/projects/my-skills/markdown-stats ~/.claude/skills/
 - Skills 目录位置：macOS/Linux 是 `~/.claude/skills/`，Windows 是 `%LOCALAPPDATA%\Claude\skills\`
 - 复制完成后需要重启 Claude Code 才能加载新 skill
 
+### Open Claw
+直接把仓库链接 `https://github.com/zhou-xingxing/my-skills` 发给它，告诉它你想安装的 skill
