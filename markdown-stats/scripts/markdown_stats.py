@@ -32,10 +32,12 @@ READING_TYPES = {
 
 def extract_text(content: str) -> str:
     """提取纯文本（去除 markdown 标记）"""
-    # 移除代码块
-    text = re.sub(r'```[\s\S]*?```', '', content)
-    # 移除行内代码
-    text = re.sub(r'`[^`]*`', '', text)
+    # 移除代码块标记（```language），但保留内容
+    text = re.sub(r'^```[\w]*\n', '', content, flags=re.MULTILINE)
+    text = re.sub(r'\n?```\s*$', '', text, flags=re.MULTILINE)
+    # 移除行内代码标记（`），但保留内容
+    text = re.sub(r'`([^`]*)`', r'\1', text)
+
     # 移除图片
     text = re.sub(r'!\[([^\]]*)\]\([^)]+\)', '', text)
     # 移除链接，保留链接文字
