@@ -86,7 +86,7 @@ python3 scripts/markdown_stats.py <文件路径> --type normal
 python3 scripts/markdown_stats.py <文件路径> --type skim --insert
 ```
 
-### 完整使用示例
+#### 完整使用示例
 
 **场景 1：用户提供了文件路径**
 
@@ -148,7 +148,7 @@ python3 scripts/markdown_stats.py <文件路径> --type tech    # 技术文档
 python3 scripts/markdown_stats.py <文件路径> --type normal  # 普通阅读
 python3 scripts/markdown_stats.py <文件路径> --type skim    # 快速浏览
 
-# 指定阅读类型，并插入提示框到原文件
+# 指定阅读类型，展示统计结果并插入提示框到原文件
 python3 scripts/markdown_stats.py <文件路径> --insert
 python3 scripts/markdown_stats.py <文件路径> -i --type normal
 ```
